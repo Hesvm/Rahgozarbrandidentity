@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { background: var(--bg-canvas); padding: 24px 28px; margin: 0; }
+  .label { font-family: var(--font-en); font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--fg-4); margin-bottom: 12px; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; }
+  .chip {
+    font-family: var(--font-fa); font-size: 14px;
+    padding: 9px 16px;
+    border-radius: var(--radius-pill);
+    background: var(--bg-elevated);
+    color: var(--fg-2);
+    border: 1px solid var(--border-default);
+    line-height: 1;
+  }
+  .chip.active { background: var(--graphite-900); color: #F4F1EA; border-color: var(--graphite-900); }
+  .chip.brand  { background: var(--bg-brand-faint); color: var(--teal-700); border-color: var(--border-brand); }
+  .chip.ghost  { background: transparent; }
+  .badge {
+    display: inline-flex; align-items:center; gap: 6px;
+    font-family: var(--font-en); font-size: 11px; font-weight: 500;
+    padding: 4px 10px; border-radius: var(--radius-pill);
+    background: var(--bg-brand-faint); color: var(--teal-700);
+  }
+</style>
+</head>
+<body>
+  <div class="label">Section nav chips — used on country wiki</div>
+  <div class="row" style="margin-bottom: 16px">
+    <span class="chip active">جغرافیا و آب‌وهوا</span>
+    <span class="chip">هزینه زندگی</span>
+    <span class="chip">شرایط ورود و ویزا</span>
+    <span class="chip">فرهنگ و جامعه</span>
+    <span class="chip">شهرها</span>
+    <span class="chip">امنیت و سفر</span>
+  </div>
+  <div class="label">Badges &amp; tags</div>
+  <div class="row">
+    <span class="badge">● بدون مصاحبه</span>
+    <span class="badge" style="background: var(--fog-100); color: var(--fg-3);">شنگن</span>
+    <span class="badge" style="background: #F5E8D8; color: #8C5A20;">مدت‌دار</span>
+    <span class="badge" style="background: #FBE9E9; color: #9C4646;">سختی بالا</span>
+  </div>
+</body>
+</html>

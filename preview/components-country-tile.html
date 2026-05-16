@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { background: var(--bg-canvas); padding: 28px 32px; margin: 0; }
+  .label { font-family: var(--font-en); font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--fg-4); margin-bottom: 14px; }
+  .row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .tile {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-md);
+    padding: 20px 22px 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    box-shadow: var(--shadow-1);
+    transition: box-shadow var(--dur-base) var(--ease-drift), border-color var(--dur-base);
+  }
+  .tile:hover { box-shadow: var(--shadow-2); border-color: var(--border-default); }
+  .flag { font-size: 28px; line-height: 1; }
+  .name { font-family: var(--font-fa); font-size: 18px; font-weight: 600; color: var(--fg-1); }
+</style>
+</head>
+<body>
+  <div class="label">Country tile — homepage grid</div>
+  <div class="row">
+    <div class="tile"><span class="flag">🇨🇦</span><span class="name">کانادا</span></div>
+    <div class="tile"><span class="flag">🇩🇪</span><span class="name">آلمان</span></div>
+    <div class="tile"><span class="flag">🇫🇮</span><span class="name">فنلاند</span></div>
+    <div class="tile"><span class="flag">🇸🇪</span><span class="name">سوئد</span></div>
+  </div>
+</body>
+</html>

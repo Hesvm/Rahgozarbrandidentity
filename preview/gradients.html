@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { background: var(--bg-canvas); padding: 24px; margin: 0; font-family: var(--font-en); }
+  .label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--fg-4); margin-bottom: 10px; }
+  .row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .swatch { aspect-ratio: 1.5 / 1; border-radius: var(--radius-md); display:flex; flex-direction:column; justify-content:flex-end; padding: 12px; font-family: var(--font-mono); font-size: 11px; color: var(--graphite-900); border: 1px solid var(--border-soft); }
+  .dark { color: #FAF8F4; border-color: transparent; }
+</style>
+</head>
+<body>
+  <div class="label">Atmospheric gradients — reserved, not page backgrounds</div>
+  <div class="row">
+    <div class="swatch" style="background: var(--grad-horizon)">horizon</div>
+    <div class="swatch" style="background: var(--grad-fog)">fog</div>
+    <div class="swatch dark" style="background: var(--grad-tide)">tide</div>
+    <div class="swatch" style="background: var(--grad-dawn), var(--bg-canvas)">dawn</div>
+  </div>
+</body>
+</html>

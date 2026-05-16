@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { background: var(--bg-canvas); padding: 24px; margin: 0; }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+  .swatch { aspect-ratio: 1.4 / 1; border-radius: var(--radius-md); display:flex; flex-direction:column; justify-content:flex-end; padding: 8px; color: var(--graphite-900); font-size: 10px; line-height:1.3; box-shadow: var(--shadow-inset-soft); }
+  .swatch .h { font-weight: 600; font-size: 11px; }
+  .swatch .v { opacity: 0.6; font-family: var(--font-mono); font-size: 9px; }
+  .swatch.dark { color: #FAF8F4; }
+  .label { font-family: var(--font-en); font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--fg-3); margin-bottom: 8px; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div>
+      <div class="label">Warm Stone — surfaces</div>
+      <div class="row">
+        <div class="swatch" style="background:var(--stone-50)"><span class="h">50</span><span class="v">FAF8F4</span></div>
+        <div class="swatch" style="background:var(--stone-100)"><span class="h">100</span><span class="v">F4F1EA</span></div>
+        <div class="swatch" style="background:var(--stone-200)"><span class="h">200</span><span class="v">EAE5DA</span></div>
+        <div class="swatch" style="background:var(--stone-300)"><span class="h">300</span><span class="v">D9D2C2</span></div>
+        <div class="swatch dark" style="background:var(--stone-400)"><span class="h">400</span><span class="v">B8AF9C</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="label">Fog — neutrals</div>
+      <div class="row">
+        <div class="swatch" style="background:var(--fog-50)"><span class="h">50</span><span class="v">F7F7F5</span></div>
+        <div class="swatch" style="background:var(--fog-100)"><span class="h">100</span><span class="v">EFEFEC</span></div>
+        <div class="swatch" style="background:var(--fog-200)"><span class="h">200</span><span class="v">E3E3DF</span></div>
+        <div class="swatch dark" style="background:var(--fog-400)"><span class="h">400</span><span class="v">9C9C95</span></div>
+        <div class="swatch dark" style="background:var(--fog-600)"><span class="h">600</span><span class="v">4E4E48</span></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

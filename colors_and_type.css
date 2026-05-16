@@ -1,0 +1,279 @@
+/* =========================================================
+   Rahgozar — Colors & Type
+   "A beautifully designed compass for people redesigning their future."
+   ========================================================= */
+
+/* ---- Webfonts ------------------------------------------------ */
+/* Persian: Ravi — self-hosted variable font.
+   Three flavours are shipped in ./fonts/:
+     · Ravi-VF.ttf        — default (Persian + Latin, Latin digits)
+     · RaviFaNum-VF.ttf   — uses Persian numerals (۰-۹)
+     · RaviNoEn-VF.ttf    — Persian only (no Latin glyphs)
+   The default face below is Ravi-VF; opt-in classes give the
+   other two when needed. */
+@font-face {
+  font-family: "Ravi";
+  src: url("fonts/Ravi-VF.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Ravi FaNum";
+  src: url("fonts/RaviFaNum-VF.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Ravi NoEn";
+  src: url("fonts/RaviNoEn-VF.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+/* ---- Color foundations -------------------------------------- */
+:root {
+  /* Brand — muted oceanic teal */
+  --teal-50:  #ECF7F4;
+  --teal-100: #D4EFE8;
+  --teal-200: #A9DFD2;
+  --teal-300: #74CCBC;   /* logo gradient stop A */
+  --teal-400: #4FB8A4;
+  --teal-500: #2EA38C;   /* primary brand */
+  --teal-600: #178672;   /* logo gradient stop B */
+  --teal-700: #0F6A5B;
+  --teal-800: #0B4E44;
+  --teal-900: #0A332E;
+
+  /* Warm stone — backgrounds */
+  --stone-50:  #FAF8F4;   /* primary surface */
+  --stone-100: #F4F1EA;
+  --stone-200: #EAE5DA;
+  --stone-300: #D9D2C2;
+  --stone-400: #B8AF9C;
+
+  /* Soft fog — neutral grays */
+  --fog-50:  #F7F7F5;
+  --fog-100: #EFEFEC;
+  --fog-200: #E3E3DF;
+  --fog-300: #C9C9C3;
+  --fog-400: #9C9C95;
+  --fog-500: #6F6F69;
+  --fog-600: #4E4E48;
+
+  /* Graphite — text */
+  --graphite-900: #0F1A18;  /* deepest, headings */
+  --graphite-800: #1A2826;  /* body strong */
+  --graphite-700: #2E3B38;  /* body */
+  --graphite-600: #4A5754;  /* secondary text */
+  --graphite-500: #6B7672;  /* tertiary text */
+
+  /* Semantic surfaces */
+  --bg-canvas:        var(--stone-50);
+  --bg-elevated:      #FFFFFF;
+  --bg-subtle:        var(--fog-50);
+  --bg-muted:         var(--fog-100);
+  --bg-brand-faint:   var(--teal-50);
+
+  /* Semantic foreground */
+  --fg-1:  var(--graphite-900); /* primary */
+  --fg-2:  var(--graphite-700); /* body */
+  --fg-3:  var(--graphite-600); /* secondary */
+  --fg-4:  var(--graphite-500); /* tertiary / hints */
+  --fg-on-brand: #FFFFFF;
+  --fg-brand:    var(--teal-600);
+
+  /* Borders */
+  --border-soft:    rgba(15, 26, 24, 0.06);
+  --border-default: rgba(15, 26, 24, 0.10);
+  --border-strong:  rgba(15, 26, 24, 0.16);
+  --border-brand:   rgba(46, 163, 140, 0.45);
+
+  /* Status — quiet, not loud */
+  --success: #2EA38C;
+  --warning: #C58A3A;
+  --danger:  #B85C5C;
+  --info:    #4F84B8;
+
+  /* Atmosphere — soft gradients */
+  --grad-horizon: linear-gradient(180deg, #FAF8F4 0%, #EFEEE8 100%);
+  --grad-fog:     linear-gradient(180deg, #F7F7F5 0%, #FAF8F4 60%, #F4F1EA 100%);
+  --grad-tide:    linear-gradient(135deg, #74CCBC 0%, #178672 100%);
+  --grad-dawn:    radial-gradient(60% 60% at 50% 0%, #ECF7F4 0%, transparent 70%);
+
+  /* ---- Type foundations ------------------------------------- */
+  --font-fa:    "Ravi", "Vazirmatn", system-ui, sans-serif;
+  --font-fa-num: "Ravi FaNum", "Ravi", system-ui, sans-serif;   /* Persian-numeral variant */
+  --font-fa-pure: "Ravi NoEn", "Ravi", system-ui, sans-serif;   /* Persian-only variant */
+  --font-en:    "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:  ui-monospace, "JetBrains Mono", "SF Mono", Menlo, monospace;
+
+  /* Persian numerals are mixed; Estedad supports both — these
+     lining figures pair best with the brand's editorial feel */
+  --font-features-fa: "ss01" 1, "ss02" 1, "calt" 1;
+
+  /* Type scale — generous, editorial */
+  --fs-display:  72px;
+  --fs-h1:       56px;
+  --fs-h2:       40px;
+  --fs-h3:       28px;
+  --fs-h4:       22px;
+  --fs-lead:     20px;
+  --fs-body:     16px;
+  --fs-small:    14px;
+  --fs-caption:  12px;
+
+  /* Line heights — looser for Persian, breath for editorial */
+  --lh-tight:   1.15;
+  --lh-snug:    1.3;
+  --lh-normal:  1.6;
+  --lh-relaxed: 1.85;
+  --lh-fa-body: 2;       /* Persian needs more vertical breath */
+
+  /* Letter-spacing — Persian uses near-zero; Latin small caps */
+  --ls-tight:   -0.02em;
+  --ls-normal:   0;
+  --ls-loose:    0.02em;
+  --ls-caps:     0.08em;
+
+  /* Weights */
+  --w-light:    300;
+  --w-regular:  400;
+  --w-medium:   500;
+  --w-semi:     600;
+  --w-bold:     700;
+
+  /* ---- Spacing / radius / shadow ---------------------------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-2xl: 36px;
+  --radius-pill: 999px;
+
+  /* Soft, atmospheric depth — never harsh */
+  --shadow-1: 0 1px 0 rgba(15,26,24,0.04), 0 1px 2px rgba(15,26,24,0.04);
+  --shadow-2: 0 1px 0 rgba(15,26,24,0.03), 0 4px 12px rgba(15,26,24,0.05);
+  --shadow-3: 0 2px 4px rgba(15,26,24,0.04), 0 12px 32px rgba(15,26,24,0.08);
+  --shadow-4: 0 6px 12px rgba(15,26,24,0.05), 0 24px 64px rgba(15,26,24,0.10);
+  --shadow-inset-soft: inset 0 0 0 1px rgba(15,26,24,0.06);
+  --shadow-glow-brand: 0 0 0 6px rgba(46,163,140,0.10);
+
+  /* Motion — drifting, not springy */
+  --ease-drift:  cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-glide:  cubic-bezier(0.4,  0.0,  0.2, 1);
+  --ease-rise:   cubic-bezier(0.16, 1,    0.3, 1);
+  --dur-fast:    160ms;
+  --dur-base:    240ms;
+  --dur-slow:    420ms;
+  --dur-drift:   720ms;
+}
+
+/* ---- Base element styles ----------------------------------- */
+html { font-size: 16px; }
+
+body {
+  font-family: var(--font-fa);
+  font-feature-settings: var(--font-features-fa);
+  color: var(--fg-2);
+  background: var(--bg-canvas);
+  font-size: var(--fs-body);
+  line-height: var(--lh-fa-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Latin-only contexts */
+.lang-en, [lang="en"] {
+  font-family: var(--font-en);
+  line-height: var(--lh-normal);
+  font-feature-settings: "ss01" 1, "cv11" 1;
+}
+
+/* Display & headings — Persian uses lighter weights at large sizes
+   to keep the editorial calm; Latin headings use semi/bold. */
+h1, .h1, .display {
+  font-family: var(--font-fa);
+  font-size: var(--fs-h1);
+  font-weight: var(--w-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  color: var(--fg-1);
+  margin: 0;
+}
+.display { font-size: var(--fs-display); }
+
+h2, .h2 {
+  font-size: var(--fs-h2);
+  font-weight: var(--w-bold);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-tight);
+  color: var(--fg-1);
+  margin: 0;
+}
+h3, .h3 {
+  font-size: var(--fs-h3);
+  font-weight: var(--w-semi);
+  line-height: var(--lh-snug);
+  color: var(--fg-1);
+  margin: 0;
+}
+h4, .h4 {
+  font-size: var(--fs-h4);
+  font-weight: var(--w-semi);
+  line-height: var(--lh-normal);
+  color: var(--fg-1);
+  margin: 0;
+}
+
+p, .body {
+  font-size: var(--fs-body);
+  line-height: var(--lh-fa-body);
+  color: var(--fg-2);
+  margin: 0;
+}
+.lead {
+  font-size: var(--fs-lead);
+  line-height: var(--lh-relaxed);
+  color: var(--fg-3);
+  font-weight: var(--w-regular);
+}
+.small  { font-size: var(--fs-small); line-height: 1.7; }
+.caption{ font-size: var(--fs-caption); color: var(--fg-4); letter-spacing: var(--ls-loose); }
+.eyebrow{
+  font-size: var(--fs-caption);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-caps);
+  color: var(--fg-brand);
+  font-weight: var(--w-semi);
+}
+
+code, kbd, pre, .mono {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  background: var(--bg-muted);
+  padding: 0.1em 0.35em;
+  border-radius: var(--radius-xs);
+  color: var(--graphite-800);
+}
+
+/* Selection — quiet teal tint */
+::selection {
+  background: rgba(116, 204, 188, 0.32);
+  color: var(--graphite-900);
+}

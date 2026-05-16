@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { background: var(--bg-canvas); padding: 28px 32px; margin: 0; }
+  .grid { display: grid; grid-template-columns: repeat(4, auto); gap: 14px 18px; align-items: center; }
+  .label { grid-column: 1 / -1; font-family: var(--font-en); font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--fg-4); margin-bottom: 2px; }
+  .btn { font-family: var(--font-fa); font-size: 16px; font-weight: 500; padding: 12px 22px; border-radius: var(--radius-pill); border: 1px solid transparent; cursor: pointer; line-height: 1; }
+  .btn-primary { background: var(--teal-500); color: #FFFFFF; }
+  .btn-primary:hover { background: var(--teal-600); }
+  .btn-primary.pressed { background: var(--teal-700); }
+  .btn-primary.focus { box-shadow: var(--shadow-glow-brand); }
+  .btn-outline { background: transparent; color: var(--teal-600); border-color: var(--teal-500); }
+  .btn-outline:hover { background: var(--bg-brand-faint); }
+  .btn-ghost { background: transparent; color: var(--fg-1); }
+  .btn-ghost:hover { background: var(--bg-muted); }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="label">Primary — rest / hover / pressed / deep-pressed</div>
+    <button class="btn btn-primary">شروع رایگان</button>
+    <button class="btn btn-primary" style="background: var(--teal-600)">شروع رایگان</button>
+    <button class="btn btn-primary pressed">شروع رایگان</button>
+    <button class="btn btn-primary" style="background: var(--teal-700)">شروع رایگان</button>
+
+    <div class="label">Outline — rest / hover-faint / hover-strong / active</div>
+    <button class="btn btn-outline">کامیونیتی‌ها</button>
+    <button class="btn btn-outline" style="background: var(--bg-brand-faint)">کامیونیتی‌ها</button>
+    <button class="btn btn-outline" style="background: var(--teal-50); border-width: 2px">کامیونیتی‌ها</button>
+    <button class="btn btn-outline" style="background: var(--teal-100); border-color: var(--teal-600); color: var(--teal-700)">کامیونیتی‌ها</button>
+
+    <div class="label">Ghost — tertiary, nav</div>
+    <button class="btn btn-ghost">ادامه</button>
+    <button class="btn btn-ghost" style="background: var(--bg-muted)">ادامه</button>
+    <button class="btn btn-ghost" style="color: var(--fg-3)">انصراف</button>
+    <button class="btn btn-ghost" style="color: var(--fg-4)" disabled>غیرفعال</button>
+  </div>
+</body>
+</html>

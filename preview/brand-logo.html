@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg-canvas);
+    padding: 28px 32px;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+</style>
+</head>
+<body>
+  <div style="display:flex; align-items:center; gap:28px;">
+    <!-- logo mark, full -->
+    <img src="../assets/logo-mark.png" width="96" height="96" alt="">
+    <!-- wordmark + mark lockup -->
+    <div style="display:flex; align-items:center; gap:14px;">
+      <img src="../assets/logo-mark.png" width="56" height="56" alt="">
+      <img src="../assets/logo-wordmark.svg" height="56" alt="رهگذر" style="color: var(--graphite-900);">
+    </div>
+    <!-- small mark on dark surface -->
+    <div style="background: var(--graphite-900); border-radius: 16px; padding: 18px 22px; display:flex; align-items:center; gap:12px;">
+      <img src="../assets/logo-mark.png" width="40" height="40" alt="">
+      <img src="../assets/logo-wordmark.svg" height="34" alt="" style="color: #FAF8F4; filter: invert(1) hue-rotate(180deg) brightness(0.95);">
+    </div>
+  </div>
+</body>
+</html>
